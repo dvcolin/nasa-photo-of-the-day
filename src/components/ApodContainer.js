@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios"
 
-export default function Header({text}) {
+export default function Header(props) {
+    const [pic, setPic] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-03-25')
+        .then(res => {
+            const imgSrc = res.data.url;
+            setPic(imgSrc);
+        })
+    }, [pic])
+
     return (
-        <h1 className='apod-header'>{text}</h1>
+        <div className='apod-container'>
+            {props.children}
+        </div>
     )
 }
