@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import "./App.scss";
 import Header from "./components/Header";
 import ApodContainer from "./components/ApodContainer";
 

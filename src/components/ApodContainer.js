@@ -6,13 +6,14 @@ import ApodDate from "./ApodDate";
 import ApodDescription from "./ApodDescription";
 
 export default function Header(props) {
+    const dateUrl = `2018-03-25`;
     const [pic, setPic] = useState([]);
     const [title, setTitle] = useState([]);
     const [date, setDate] = useState([]);
     const [desc, setDesc] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-03-25')
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${dateUrl}`)
         .then(res => {
             const imgSrc = res.data.hdurl;
             const imgTitle = res.data.title;
