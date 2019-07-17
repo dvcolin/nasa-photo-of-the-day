@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
+import ApodImage from "./ApodImage";
 
 export default function Header(props) {
     const [pic, setPic] = useState([]);
@@ -14,7 +15,7 @@ export default function Header(props) {
 
     return (
         <div className='apod-container'>
-            {props.children}
+            <ApodImage src={pic} />
         </div>
     )
 }
