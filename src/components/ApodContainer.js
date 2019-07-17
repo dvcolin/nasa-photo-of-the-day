@@ -3,8 +3,7 @@ import axios from "axios"
 import ApodInfo from "./ApodInfo";
 import ApodImageContainer from "./ApodImageContainer";
 
-export default function ApodContainer(props) {
-    const dateUrl = `2018-03-25`;
+export default function ApodContainer({dateUrl}) {
     const [pic, setPic] = useState([]);
     const [title, setTitle] = useState([]);
     const [date, setDate] = useState([]);
