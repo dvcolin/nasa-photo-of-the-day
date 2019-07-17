@@ -2,8 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Play&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Play&display=swap');
 
+body {
+    background: #220222;
+    padding: 2.5rem 0;
+    color: #242424;
+}
+
 .App {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -11,32 +17,64 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .apod-container {
     display: flex;
-    flex-direction: column;
-    // align-items: flex-end;
-    padding-left: 2.5rem;
-}
-
-.apod-title, .apod-date {
-    font-family: 'Play', sans-serif;
-    text-transform: uppercase;
-}
-
-.apod-title {
-    margin-left: auto;
-}
-
-.apod-date {
-    margin-right: auto;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-}
-
-.apod-image {
-    max-width: 50%;
+    padding: 2.5rem;
+    padding-top: 1rem;
+    width: 90%;
+    background: #DADFF7;
+    margin: 2rem auto;
     border-radius: 8px;
-    margin-right: auto;
+
+    .apod-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 55%;
+    
+        .apod-date {
+            margin-right: auto;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+    
+        .apod-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-right: auto;
+        }
+    }
+
+    .apod-info {
+        padding: 0 2.5rem;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .apod-description {
+            font-size: 1rem;
+            font-family: 'Play', sans-serif;
+            line-height: 1.4rem;
+        }
+    }
+
+    .apod-title, .apod-date {
+        font-family: 'Play', sans-serif;
+        text-transform: uppercase;
+    }
+    
 }
+
+
+
+
+
+
+

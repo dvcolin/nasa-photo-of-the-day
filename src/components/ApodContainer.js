@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import ApodImage from "./ApodImage";
-import ApodTitle from "./ApodTitle";
-import ApodDate from "./ApodDate";
-import ApodDescription from "./ApodDescription";
+import ApodInfo from "./ApodInfo";
+import ApodImageContainer from "./ApodImageContainer";
 
-export default function Header(props) {
+export default function ApodContainer(props) {
     const dateUrl = `2018-03-25`;
     const [pic, setPic] = useState([]);
     const [title, setTitle] = useState([]);
@@ -32,10 +30,8 @@ export default function Header(props) {
 
     return (
         <div className='apod-container'>
-            <ApodTitle text={title} />
-            <ApodDate text={date} />
-            <ApodImage src={pic} />
-            <ApodDescription text={desc} />
+            <ApodImageContainer date={date} img={pic} />
+            <ApodInfo title={title} desc={desc} />
         </div>
     )
 }
