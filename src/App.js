@@ -16,9 +16,7 @@ function App() {
       <Navbar>
         <NavbarLogo>NASA</NavbarLogo>
         <NavbarLinks>
-          <NavbarLink href="#" status="active">
-            Home
-          </NavbarLink>
+          <NavbarLink href="#" status="active">Home</NavbarLink>
           <NavbarLink href="#">About</NavbarLink>
           <NavbarLink href="#">Gallery</NavbarLink>
           <NavbarLink href="#">Contact</NavbarLink>
