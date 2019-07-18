@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"
 import ApodInfo from "./ApodInfo";
 import ApodImageContainer from "./ApodImageContainer";
+import { Container } from 'semantic-ui-react'
 
 export default function ApodContainer({dateUrl}) {
     const [pic, setPic] = useState([]);
@@ -28,9 +29,9 @@ export default function ApodContainer({dateUrl}) {
     }, [])
 
     return (
-        <div className='apod-container'>
+        <Container className='apod-container'>
             <ApodImageContainer date={date} img={pic} />
             <ApodInfo title={title} desc={desc} />
-        </div>
+        </Container>
     )
 }
